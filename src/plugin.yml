@@ -1,0 +1,37 @@
+name: OpTools
+version: 0.3
+main: com.raphaellevy.optools.OpTools
+commands:
+    optools:
+        description: commands for optools
+        aliases: [ot]
+        usage: /optools [command] [args]
+permissions:
+    optools.*:
+        children:
+            optools.version: true
+            optools.get: true
+            optools.tools.*: true
+    optools.version:
+        default: true
+    optools.get:
+        default: op
+    optools.tools.*:
+        children:
+            optools.tools.killsword: true
+            optools.tools.banhammer: true
+            optools.tools.detonator: true
+            optools.tools.pixiedust: true
+            optools.tools.kickboots: true
+    optools.tools.killsword:
+        default: op
+    optools.tools.banhammer:
+        default: op
+    optools.tools.detonator:
+        default: op
+    optools.tools.pixiedust:
+        default: op
+    optools.tools.kickboots:
+        default: op
+            
+    
